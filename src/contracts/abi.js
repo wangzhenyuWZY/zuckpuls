@@ -5,7 +5,7 @@ export const abi = {
 }
 
 export const prodAddrs = {
-    ido: ''
+    ido: '0xaE8e8518A19A2260740716481Cf3597c118b7e04'
 }
 
 export const testAddrs = {

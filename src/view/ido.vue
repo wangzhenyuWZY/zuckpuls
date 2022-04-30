@@ -41,19 +41,19 @@
                     </div>
                 </div>
                 <p class="idoRule">
-                    Contract Address:   0x3eE0...f18b
+                    <!-- Contract Address:   0x3eE0...f18b -->
                     <br>Blockchain Network: Binance  
                     <br>Token Supply:10,000,000,000,000
                     <br>Total Sale Percentage:20%
-                    <br>Presale Rate 1 BNB = 10,000,000,000 ZUCKPLUS
+                    <br>Presale Rate 1 BNB = 40,000,000,000 ZUCKPLUS
                     <br>Allocation:0.25 BNB
                     <br>Listing Platform: PancakeSwap
                     <br>Vesting Schedule (Public): 100% at TGE
                 </p>
                 <h3 class="formTitle">Enter BNB value:</h3>
-                <input class="formVal" value="0.25">
+                <input class="formVal" disabled value="0.25">
                 <h3 class="formTitle">You will get:</h3>
-                <input class="formVal" value="10,000,000,000">
+                <input class="formVal" disabled value="10,000,000,000">
                 <el-button :loading="doing" :disabled="doing" class="confirm" @click="swap">Contribute</el-button>
             </div>
         </div>
