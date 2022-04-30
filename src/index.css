@@ -7,10 +7,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-* {
-    color: white;
-    /* background: black; */
-}
 
 .el-message {
     min-width: max-content !important;
@@ -61,7 +57,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5, h6, pre, code, form, fieldset, legend
     }
     
     a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     }
     
     img {
