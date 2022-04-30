@@ -5,17 +5,17 @@
                 <div class="logo"><img src="../assets/img/logo.webp"></div>
                 <div class="footCon">
                     <div class="linkList">
-                        <a href="#" class="linkItem">Home</a>
-                        <a href="#" class="linkItem">Tokenomics</a>
-                        <a href="#" class="linkItem">IDO</a>
-                        <a href="#" class="linkItem">Roadmap</a>
-                        <a href="#" class="linkItem">Contact</a>
+                        <a  @click="toDetail(0)" class="linkItem">Home</a>
+                        <a  @click="toDetail(1)" class="linkItem">Tokenomics</a>
+                        <a  @click="toDetail(2)" class="linkItem">IDO</a>
+                        <a  @click="toDetail(3)" class="linkItem">Roadmap</a>
+                        <a  @click="toDetail(4)" class="linkItem">Contact</a>
                     </div>
                     <div class="contract">
                         <a target="_blank" href="#"><img src="../assets/img/contract1.webp"></a>
-                        <a target="_blank" href="#"><img src="../assets/img/contract2.webp"></a>
-                        <a target="_blank" href="#"><img src="../assets/img/contract3.webp"></a>
-                        <a target="_blank" href="#"><img src="../assets/img/contract4.webp"></a>
+                        <a target="_blank" href="https://twitter.com/ZUCKPLUS"><img src="../assets/img/contract2.webp"></a>
+                        <a target="_blank" href="https://t.me/zuckplusarmy"><img src="../assets/img/contract3.webp"></a>
+                        <a target="_blank" href="https://medium.com/@zuckplus"><img src="../assets/img/contract4.webp"></a>
                     </div>
                 </div>
             </div>
@@ -23,6 +23,31 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+    }
+  },
+  created() {
+      
+  },
+  mounted(){
+      
+  },
+  methods: {
+      toDetail(i){
+          localStorage.setItem('active',i)
+          if(i!==2){
+              this.$router.push({name:'home'})
+              this.$emit('toId',i)
+          }else{
+              this.$router.push({name:'ido'})
+          }
+      }
+  }
+}
+</script>
 <style lang="less" scoped>
 .footerPanel{
     background:#000000;

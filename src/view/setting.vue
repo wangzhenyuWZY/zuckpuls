@@ -24,6 +24,9 @@
 
     </div>
 </template>
+<script>
+
+</script>
 <style lang="less" scoped>
 .setPanel{
     background:#000;

@@ -33,9 +33,14 @@ export default {
       drawer:false,
       tolerPop:false,
       defaultAccount:'',
-      active:2
     }
   },
+  props: {
+        active: {
+            type: Number,String,
+            default: 0
+        }
+    },
   async created() {
       this.eth = await getEther();
         if (this.eth) {
@@ -43,8 +48,8 @@ export default {
         }
   },
   mounted(){
-      this.active = localStorage.getItem('active')
-      this.$emit('toId',this.active)
+      let active = localStorage.getItem('active')
+      this.$emit('toId',active)
   },
   methods: {
       toDetail(i){
@@ -53,7 +58,6 @@ export default {
           if(i!==2){
               this.$router.push({name:'home'})
               this.$emit('toId',i)
-              this.active = i
           }else{
               this.$router.push({name:'ido'})
           }
@@ -104,6 +108,7 @@ export default {
             margin-right:10px;
             text-decoration:none;
             text-align:center;
+            cursor: pointer;
             &.active{
                 border-top:7px solid #FF0000;
                 color:#DC1921;

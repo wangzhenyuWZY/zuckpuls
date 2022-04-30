@@ -3,7 +3,7 @@
         <!-- Banner -->
         <div class="topPanel" id="home">
             <div class="layer">
-                <Header @toId="toId"></Header>
+                <Header @toId="toId" :active="navActive"></Header>
                 <div class="infoPanel">
                     <h2 class="name">ZUCKPLUS</h2>
                     <h3 class="intro">The first twin token in<br> the cryptocurrency circle</h3>
@@ -13,9 +13,9 @@
                     <p class="infoText">Tribute to the real DEFI - decentralization, decentralization, decentralization, and fairness
                     </p>
                     <div class="btns">
-                        <a class="btn" href="#" target="_blank">Buy $ZUCKPLUS</a>
-                        <a class="btn" href="#" target="_blank">Buy $ZUCK</a>
-                        <a class="btn" href="#" target="_blank">$ZUCK Official Website</a>
+                        <a class="btn" @click="$message.success('Coming soon!')" target="_blank">Buy $ZUCKPLUS</a>
+                        <a class="btn" href="https://pancakeswap.finance/swap?inputCurrency=0x81b242276afa697b118554f8cea4a5b09743a70b" target="_blank">Buy $ZUCK</a>
+                        <a class="btn" href="https://www.zuckmeta.io" target="_blank">$ZUCK Official Website</a>
                     </div>
                 </div>
             </div>
@@ -162,7 +162,7 @@
             </div>
         </div>
         <!--footer-->
-        <Footer id="contact"></Footer>
+        <Footer id="contact" @toId="toId"></Footer>
     </div>
 </template>
 <script>
@@ -174,7 +174,8 @@ export default {
   data() {
     return {
       drawer:false,
-      tolerPop:false
+      tolerPop:false,
+      navActive:0
     }
   },
   async created() {
@@ -188,6 +189,7 @@ export default {
   },
   methods: {
     toId(i){
+        this.navActive = i
         if(i == 0){
             let elm = document.getElementById('home')
             elm.scrollIntoView(true)

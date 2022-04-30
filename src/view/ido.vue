@@ -1,6 +1,6 @@
 <template>
     <div class="idoContainer">
-        <Header></Header>
+        <Header :active="2"></Header>
         <div class="idoTopPanel">
             <div class="layer">
                 <h2>I DO</h2>
